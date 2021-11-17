@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title> Appointment Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+
+        <div class="wrapper">
+
+            <!-- ============ Main Header - START ============ -->
+
+            <header id="master-header">
+                <div class="top-header">
+
+                    <div class="container">
+
+                        <h1 id="logo">
+                            <a href="index.html">
+                                <img src="img/logo2.png" alt=" Tattoo Studio">
+                            </a>
+                        </h1>
+
+                        <!-- ============ Main Navigation - START ============ -->
+
+                         <a id="nav-toggle" href="#"><span></span></a>
+                        <nav id="nav-menu">
+                            <ul>
+                                <li>
+                                    <a title="About Us 1 Page" href="about-us-1.html">О нас</a>
+                                   
+                                </li>
+                                <li>
+                                     <a title="Portfolio" href="portfolio-3col.html">Портфолио</a>
+                                   
+                                </li>
+                                <li>
+                                    <a title="Journal" href="blog-post.html">Блог</a>
+                                  
+                                </li>
+                                <li><a title="Faqs &amp; Disclaimers Page" href="faq.html">Полезная информация</a></li>
+                                <li><a title="Appointment Page" href="appointment.html">Напишите нам</a></li>
+                            </ul>
+                        </nav>
+
+                        <!-- ============ Main Navigation - END ============ -->
+
+                    </div>
+                </div>
+
+                <h2 id="page-title">НАПИШИТЕ  <span>НАМ</span></h2>
+            </header>
+
+            <!-- ============ Main Header - END ============ -->
+
+            <div id="main">
+
+                <!-- ============ Contacts Bar - START ============ -->
+
+                <div id="contacts-bar" class="row">
+                    <div class="address col-md-6"><strong>Tattoo Studio</strong>, Тимирязева 65 Belarus Minsk</div>
+                    <div class="other col-md-6">
+                        <span class="contact"><i class="fa fa-phone"></i>Phone: <strong>+375(29)1234567</strong></span>
+                        <span class="contact"><i class="fa fa-envelope"></i>Email: <a href="mailto:email@domain.com"><strong>test@test.com</strong></a></span>
+                    </div>
+                </div>
+
+                <!-- ============ Contacts Bar - END ============ -->
+
+                <div class="section">
+
+                    <div class="content container">
+
+                        <div class="col-md-4">
+
+                            <h2 class="focus-title">Напишите нам</h2>
+
+                            <p>Если вы готовы к тату бла-бла</p>
+
+                            <p>Оставьте свои данные и мы свяжемся с вами бла-бла!</p>
+
+                            <h3>Tattoo Studio Talisman</h3>
+
+                            <div id="map"></div>
+
+                        </div>
+
+                        <!-- ============ Appointment Form - START ============ -->
+
+                        <div class="col-md-8">
+
+                            <form class="contact-form" action="mailer/appointment.php" method="post">
+
+                                <label>
+                                    <strong>Имя</strong>
+                                    <input class="required" type="text" name="first_name">
+                                </label>
+                                <label>
+                                    <strong>Фамилия</strong>
+                                    <input class="required" type="text" name="last_name">
+                                </label>
+                                <label>
+                                    <strong>Email </strong>
+                                    <input class="required" type="text" name="email">
+                                </label>
+                                <label>
+                                    <strong>Номер телефона</strong>
+                                    <input class="required" type="text" name="phone">
+                                </label>
+                                <label>
+                                    <strong>Место татуировки</strong>
+                                    <select name="part_body">
+                                        <option value="Leg">Нога</option>
+                                        <option value="Calf">икра</option>
+                                        <option value="Ankle">Лодышка</option>
+                                        <option value="Foot">Нога</option>
+                                        <option value="Arm">Рука</option>
+                                        <option value="Forearm">Запястье</option>
+                                        <option value="front"> Грудь</option>
+                                        <option value="Hand">Кисть</option>
+                                        <option value="Nek">Шея</option>
+                                        <option value="Head">голова</option>
+                                        <option value="Back">Спина</option>
+                                        <option value="Buttocks">Ягодицы</option>
+                                        <option value="Shelder">Плечо</option>
+                                        <option class="other" value="Other">Другое</option>
+                                    </select>
+                                </label>
+                                <label id="other" class="hidden-field">
+                                    <strong>Specific Part of Body</strong>
+                                    <input type="text" name="custom">
+                                </label>
+                                <label><strong>Tattoo Size *</strong> (ex: 5x4)
+                                    <input class="required" type="text" name="size">
+                                </label>
+                                <div class="radio label">
+                                    <strong>Цвет татуировки</strong>
+                                    <label>
+                                        <input type="radio" value="Black &amp; White" name="color" checked>
+                                        <span class="radio-replacer"></span>
+                                        <span>Черный</span>
+                                    </label>
+                                    <label>
+                                        <input class="required" type="radio" value="Color" name="color">
+                                        <span class="radio-replacer"></span>
+                                        <span>Другое</span>
+                                    </label>
+                                </div>
+                                <label><strong>Пожелания по татуировке</strong>
+                                    <textarea class="required" name="description"></textarea>
+                                </label>
+                                <div class="radio image-radio label">
+                                    <strong>Выберите мастера</strong>
+                                    <label>
+                                        <input type="radio" value="Artist A" name="artist" checked>
+                                        <span><img src="img/user.jpg" alt="Artist A"><span>Макс</span></span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" value="Artist B" name="artist">
+                                        <span><img src="img/user.jpg" alt="Artist B"><span>Стас</span></span>
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" value="Artist C" name="artist">
+                                        <span><img src="img/user.jpg" alt="Artist C"><span>Даник</span></span>
+                                    </label>
+                                </div>
+                                <hr>
+                                 
+                                <hr>
+                             
+                                <input class="submit btn md" type="submit" name="submit" value="Отправить">
+                                <input type="hidden" name="form_type" value="appointment">
+
+                            </form>
+
+                        </div>
+
+                        <!-- ============ Appointment Form - END ============ -->
+
+                    </div>
+
+                </div>
+
+                <!-- ============ Instagram Banner - START ============ -->
+
+                <a class="instagram-bar" href="#">Подпишитесь на нас в <strong>Инстаграм</strong>!</a>
+
+                <!-- ============ Instagram Banner - END ============ -->
+
+            </div>
+
+            <!-- ============ Footer - START ============ -->
+
+            <footer class="dark">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="footer-col col-md-4 col-sm-6">
+
+                            <h3 class="focus-title">О нас</h3>
+                            <p><img width="200" class="align-center" src="img/logo.png" alt=" Tattoo Studio"></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet facilis iusto quam, nisi voluptates minima. Nihil quasi dolore odio nulla sequi, ipsum placeat distinctio vero neque maxime, et reprehenderit asperiores.</p>
+
+                        </div>
+
+                        <div class="footer-col col-md-4 col-sm-6">
+
+                            <h3 class="focus-title"><i class="fa fa-clock-o"></i>Working Days</h3>
+                            <dl class="working-days">
+                                <dt>Monday</dt>
+                                <dd>10:00 - 19:00</dd>
+                                <dt>Tuesday</dt>
+                                <dd>10:00 - 19:00</dd>
+                                <dt>Wednesday</dt>
+                                <dd>10:00 - 19:00</dd>
+                                <dt>Thursday</dt>
+                                <dd>10:00 - 19:00</dd>
+                                <dt>Friday</dt>
+                                <dd>10:00 - 19:00</dd>
+                                <dt>Saturday</dt>
+                                <dd>10:00 - 19:00</dd>
+                                <dt>Sunday</dt>
+                                <dd>CLOSED</dd>
+                            </dl>
+
+                        </div>
+
+                        <div class="footer-col footer-contacts col-md-4 col-sm-12">
+
+                            <div class="contact-item"><span> Tattoo Studio Talisman</span> <strong>Тимирязева 65 Belarus Minsk</strong></div>
+                            <div class="contact-item"><span>Phone:</span> <strong>+375(29)1234567</strong></div>
+                            <div class="contact-item"><span>Email:</span> <strong><a href="#">test@test.com</a></strong></div>
+                            <div class="contact-item">
+                                <span>Подпишитесь на нас:</span>
+                                <ul class="social-links">
+                                    <li><a title="Facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a title="Twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a title="Google+" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a title="Instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="copyright">
+                    &copy; 2020 - <strong> itBrozers</strong>
+                </div>
+
+            </footer>
+
+            <!-- ============ Footer - END ============ -->
+
+        </div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Map Scripts -->
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.4046893619106!2d27.506835315647606!3d53.9245538389446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbc569216ea86f%3A0x77dbf8f25aa66649!2sUlitsa%20Timiryazeva%2065%2C%20Minsk!5e0!3m2!1sen!2sby!4v1603653268340!5m2!1sen!2sby" width="500" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <script src="js/map.js"></script>
+
+    </body>
+</html>
